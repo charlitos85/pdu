@@ -290,7 +290,7 @@ pduParser.generate = function(message) {
 
         } else if(message.encoding === '7bit') {
             user_data = pduParser.encode7Bit(text);
-            var size = user_data.length / 2;
+            var size = text.length;
         }
 
         pdus[i] += ('00'+parseInt(size).toString(16)).slice(-2);
